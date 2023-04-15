@@ -1,5 +1,7 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
+#include <time.h>
 
 using namespace std;
 
@@ -115,4 +117,27 @@ void end_game(string answer, string word)
 	{
 		cout << "Oh no! You Lost!\n";
 	}
+}
+
+string generate_word()
+{
+	vector<string> words;
+
+	ifstream file;
+	file.open("words.txt", ios::in);
+
+	if (file.is_open())
+	{
+		while (file.good())
+		{
+			string word;
+			file >> word;
+			words.push_back(word);
+		}
+	}
+
+	srand(static_cast<unsigned int>(time(nullptr)));
+	const int random_index = rand() % words.size();
+
+	return words[random_index];
 }

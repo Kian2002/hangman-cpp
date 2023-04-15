@@ -10,7 +10,7 @@ int main()
 {
 	greet();
 
-	const string word = "hello"; // replace with a random word from a list
+	const string word = {generate_word()};
 	string answer{};
 	for (char letter : word) { answer += "_"; }
 
