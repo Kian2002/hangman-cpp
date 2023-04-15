@@ -10,8 +10,9 @@ int main()
 {
 	greet();
 
-	const string word = "hello";
-	string answer = "_____";
+	const string word = "hello"; // replace with a random word from a list
+	string answer{};
+	for (char letter : word) { answer += "_"; }
 
 	int misses = 0;
 	vector<char> incorrect_letters;
