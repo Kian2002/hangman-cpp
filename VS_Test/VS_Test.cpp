@@ -22,5 +22,25 @@ int main()
 	{
 		display_misses(misses);
 		display_status(incorrect_letters, answer);
+
+		cout << "Please enter your guess: ";
+		cin >> letter;
+
+		for (int i = 0; i < word.length(); i++)
+		{
+			if (letter == word[i])
+			{
+				cout << "Correct! You're closer to cracking the word.\n";
+				answer[i] = letter;
+				guessed_word = true;
+			}
+		}
+
+		if (guessed_word == false)
+		{
+			cout << "Incorrect! The tractor beam pulls the person in further.\n";
+			incorrect_letters.push_back(letter);
+			misses++;
+		}
 	}
 }
