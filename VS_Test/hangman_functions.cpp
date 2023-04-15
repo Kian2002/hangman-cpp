@@ -104,3 +104,15 @@ void display_status(vector<char> incorrect, string answer)
 		}
 	}
 }
+
+void end_game(string answer, string word)
+{
+	if (answer == word)
+	{
+		cout << "Hooray! You Won!\n";
+	}
+	else
+	{
+		cout << "Oh no! You Lost!\n";
+	}
+}

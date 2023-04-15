@@ -39,9 +39,13 @@ int main()
 
 		if (guessed_word == false)
 		{
-			cout << "Incorrect! The tractor beam pulls the person in further.\n";
+			cout << "Incorrect! Another body part has been added.\n";
 			incorrect_letters.push_back(letter);
 			misses++;
 		}
+
+		guessed_word = false;
 	}
+
+	end_game(answer, word);
 }
