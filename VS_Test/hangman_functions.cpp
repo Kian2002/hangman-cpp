@@ -116,6 +116,7 @@ void end_game(string answer, string word)
 	else
 	{
 		cout << "Oh no! You Lost!\n";
+		cout << "The word was: " << word << "\n";
 	}
 }
 
