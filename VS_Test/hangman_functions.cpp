@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <time.h>
+#include <ctime>
 
 using namespace std;
 
